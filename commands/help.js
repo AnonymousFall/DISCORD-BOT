@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
 
         const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('#0099ff')
+            .setColor('#ff0000')
             .setTitle('Some title')
             .setURL('https://discord.js.org/')
             .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
