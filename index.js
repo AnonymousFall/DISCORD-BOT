@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy"];
+const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy", "test"];
 
 var prefix = '?';
 
