@@ -9,7 +9,7 @@ module.exports = {
             .setTitle('Help')
             .setAuthor('Fall', 'https://i.imgur.com/wSTFkRM.png')
             .setDescription('Help commands for falls Discord bot')
-            // .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+            .setThumbnail('https://i.imgur.com/wSTFkRM.png')
             .addFields(
                 { name: 'Regular field title', value: 'Some value here' },
                 { name: '\u200B', value: '\u200B' },
