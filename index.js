@@ -27,7 +27,7 @@ var muteuser;
 bot.on('ready', () => {
     console.log('This bot is online!')
 
-    bot.commands.array.forEach(element => {
+    bot.commands.forEach(element => {
         console.log( element.name + " | " + element.description);
     });
 })
