@@ -26,4 +26,7 @@ let embed = new Discord.RichEmbed()
 .addField("Reason:", reason)
 .addField("Date:", message.createdAt.toLocaleString())
 
+let sChannel = message.guild.channels.find(c => c.name === "tut modlogs")
+sChannel.send(embed)
+
 }
