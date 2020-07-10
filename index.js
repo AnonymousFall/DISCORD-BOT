@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'NzMwNjM5NDU1OTU3OTQyMzIz.XwabEg.LJjtF6hdqi3NXTc4LQQCIUOH6YI';
 
 const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy"];
 
@@ -51,4 +50,4 @@ bot.on('message', msg => {
     }
 });
 
-bot.login(token);
+bot.login(process.env.token);
