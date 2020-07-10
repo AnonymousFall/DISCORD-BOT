@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy", "test" , "help" , "userbad"];
+const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy", "test" , "help" , "userbad", "unban"];
 
 var prefix = '?';
 
@@ -48,6 +48,8 @@ bot.on('message', msg => {
     if( allowedCommands.includes(command)) {
         if( command === "help") {
             bot.commands.get(command).execute( msg, [bot.commands, prefix])
+        } else if( command === "unban") {
+            bot.commands.get(command).execute(bot, msg, args)
         } else {
             bot.commands.get(command).execute( msg, args)
         }

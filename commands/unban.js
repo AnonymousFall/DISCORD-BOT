@@ -1,7 +1,7 @@
 module.exports = {
     name: 'unban',
     description: "this is the ban command",
-    execute(message, args){
+    execute = async (bot , message, args) => {
  
         if(!message.member.haspermission(["BAN_MEMBERS", "ADMINISTRATOR"])) return message.channel.send("You don't have permission to perform this command!")
 
