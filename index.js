@@ -26,10 +26,6 @@ var muteuser;
 
 bot.on('ready', () => {
     console.log('This bot is online!')
-
-    bot.commands.forEach(element => {
-        console.log( element.name + " | " + element.description);
-    });
 })
 
 bot.on('message', msg => {
@@ -50,7 +46,11 @@ bot.on('message', msg => {
     const command = args.shift().toLowerCase();
 
     if( allowedCommands.includes(command)) {
-        bot.commands.get(command).execute( msg, args)
+        if( command === "help") {
+            bot.commands.get(command).execute( msg, bot.commands)
+        } else {
+            bot.commands.get(command).execute( msg, args)
+        }
     }
 });
 

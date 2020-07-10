@@ -10,16 +10,13 @@ module.exports = {
             .setAuthor('Fall', 'https://i.imgur.com/wSTFkRM.png')
             .setDescription('Help commands for falls Discord bot')
             .setThumbnail('https://i.imgur.com/wSTFkRM.png')
-            .addFields(
-                { name: 'Regular field title', value: 'Some value here' },
-                { name: '\u200B', value: '\u200B' },
-                { name: 'Inline field title', value: 'Some value here', inline: true },
-                { name: 'Inline field title', value: 'Some value here', inline: true },
-            )
             // .addField('Inline field title', 'Some value here', true)
             // .setImage('https://i.imgur.com/wSTFkRM.png')
             .setTimestamp()
             .setFooter('Happy to help', 'https://i.imgur.com/wSTFkRM.png');
-    
+
+        args.forEach(element => {
+            exampleEmbed.addField( element.name, element.description, true)
+        });
     message.channel.send(exampleEmbed);    }
 }
