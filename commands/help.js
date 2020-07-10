@@ -13,7 +13,7 @@ module.exports = {
             // .addField('Inline field title', 'Some value here', true)
             // .setImage('https://i.imgur.com/wSTFkRM.png')
             .setTimestamp()
-            .setFooter('Happy to help', 'hhttps://pbs.twimg.com/profile_images/1275574904742506496/GnR_f3aA_400x400.jpg');
+            .setFooter('Happy to help', 'https://pbs.twimg.com/profile_images/1275574904742506496/GnR_f3aA_400x400.jpg');
 
         args[0].forEach(element => {
             exampleEmbed.addField( args[1]+element.name, element.description, true)
