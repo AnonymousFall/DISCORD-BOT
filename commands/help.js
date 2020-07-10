@@ -16,7 +16,7 @@ module.exports = {
             .setFooter('Happy to help', 'https://i.imgur.com/wSTFkRM.png');
 
         args.forEach(element => {
-            exampleEmbed.addField( element.name, element.description, true)
+            exampleEmbed.addField( prefix+element.name, element.description, true)
         });
     message.channel.send(exampleEmbed);    }
 }
