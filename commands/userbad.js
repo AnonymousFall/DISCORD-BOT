@@ -3,7 +3,7 @@ module.exports = {
     description: "this is the userbad command",
     execute(message, args){
         const user = message.mentions.users.first();
-        message.reply(`${user.tag} bad`);
+        message.reply(`${user} bad`);
         
     }
 }
