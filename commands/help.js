@@ -2,6 +2,8 @@ module.exports = {
     name: 'help',
     description: "this is the help command",
     execute(message, args){
+        const Discord = require('discord.js');
+
         const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#0099ff')
             .setTitle('Some title')
