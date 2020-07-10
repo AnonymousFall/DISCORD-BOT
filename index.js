@@ -47,7 +47,7 @@ bot.on('message', msg => {
 
     if( allowedCommands.includes(command)) {
         if( command === "help") {
-            bot.commands.get(command).execute( msg, bot.commands)
+            bot.commands.get(command).execute( msg, [bot.commands, prefix])
         } else {
             bot.commands.get(command).execute( msg, args)
         }

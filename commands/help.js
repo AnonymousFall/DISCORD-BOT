@@ -5,7 +5,7 @@ module.exports = {
         const Discord = require('discord.js');
 
         const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('#ff0000')
+            .setColor('#4d004d')
             .setTitle('Help')
             .setAuthor('Fall', 'https://i.imgur.com/wSTFkRM.png')
             .setDescription('Help commands for falls Discord bot')
@@ -15,8 +15,8 @@ module.exports = {
             .setTimestamp()
             .setFooter('Happy to help', 'https://i.imgur.com/wSTFkRM.png');
 
-        args.forEach(element => {
-            exampleEmbed.addField( prefix+element.name, element.description, true)
+        args[0].forEach(element => {
+            exampleEmbed.addField( args[1]+element.name, element.description, true)
         });
     message.channel.send(exampleEmbed);    }
 }
