@@ -49,7 +49,7 @@ bot.on('message', msg => {
         if( command === "help") {
             bot.commands.get(command).execute( msg, [bot.commands, prefix])
         } else if( command === "unban") {
-            bot.commands.get(command).execute(bot, msg, args)
+            bot.commands.get(command).run(bot, msg, args)
         } else {
             bot.commands.get(command).execute( msg, args)
         }
