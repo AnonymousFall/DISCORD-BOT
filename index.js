@@ -45,7 +45,7 @@ bot.on('message', async msg => {
         if( command === "help") {
             bot.commands.get(command).execute( msg, [bot.commands, prefix])
         } else if( command === "unban") {
-            await bot.commands.get(command).run(bot, msg, args)
+            bot.commands.get(command).run(bot, msg, args)
         } else {
             bot.commands.get(command).execute( msg, args)
         }
