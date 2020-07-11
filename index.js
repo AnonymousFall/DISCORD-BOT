@@ -1,36 +1,32 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const fs = require('fs');
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
 const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy", "test" , "help" , "userbad", "unban"];
 
 var prefix = '?';
-
-const fs = require('fs');
-
-bot.commands = new Discord.Collection();
-
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
-
-    const command = require(`./commands/${file}`);
-
-    bot.commands.set(command.name, command);
-
-    console.log(command.name);
-
-}
-
 var member;
 var user;
 var muteuser;
+
+
+bot.commands = new Discord.Collection();
+
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+    bot.commands.set(command.name, command);
+    console.log(command.name);
+}
+
 
 bot.on('ready', () => {
     console.log('This bot is online!')
 })
 
-bot.on('message', msg => {
+bot.on('message', async msg => {
     // Asks for the prefix responds with the prefix, this won't work if you place it further down the method
-    if(msg.content === "what is your prefix"){
+    if(msg.content.toLowerCase() === "what is your prefix"){
         msg.channel.send('My Prefix is: ' + prefix); 
     }
     
