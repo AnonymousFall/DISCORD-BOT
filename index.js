@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const fs = require('fs');
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
-const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy", "test" , "help" , "userbad", "unban"];
+const allowedCommands = ["ping", "yt", "greet", "clear", "kick", "ban", "yeezy", "test" , "help" , "userbad", "unban", "spooky" ];
 
 var prefix = '?';
 var member;
